@@ -1,1 +1,15 @@
-<h1>Say Anything...</h1>
+<section class="jumbotron text-center">
+  <div class="container">
+    <h1 class="jumbotron-heading">Say Anything...</h1>
+    <p class="lead text-muted">Add any comment you would like; no holds barred. <br>
+      <span class="small">*Your comment cannot be edited or deleted.</span></p>
+      <%= link_to 'Add a Comment', '#', data: { toggle: 'modal', target: '#myModal' }, class: 'btn btn-secondary' %>
+  </div>
+</section>
+
+
+<div class="container text-center lead text-muted">
+  <%= @comments.each do |comment| %>
+    <p><%= comment.message %></p>
+  <% end %>
+</div>

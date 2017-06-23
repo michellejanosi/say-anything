@@ -1,0 +1,4 @@
+<%= simple_form_for @comment do |f| %>
+  <%= f.input :message, label: 'Your comment:' %>
+  <%= f.button :submit, 'Add!', class: 'btn btn-secondary' %>
+<% end %>
