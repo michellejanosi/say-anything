@@ -8,7 +8,7 @@ class CommentsController < ApplicationController
   end
 
   def create
-    @comment = Comment.new(comment_params)
+    @comment = Comment.create(comment_params)
     if @comment.invalid?
       flash[:error] = "Why you leave comment blank? 😞 Try again."
     end
